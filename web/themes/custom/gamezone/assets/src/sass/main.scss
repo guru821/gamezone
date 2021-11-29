@@ -1,0 +1,15 @@
+// Abstracts folder files import
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+// Base folder files import
+@import 'base/base';
+@import 'base/reset';
+@import 'base/typography';
+// components folder files import
+@import 'components/buttons';
+@import 'components/carousel';
+// Layout folder files import
+@import 'layout/header';
+@import 'layout/footer';

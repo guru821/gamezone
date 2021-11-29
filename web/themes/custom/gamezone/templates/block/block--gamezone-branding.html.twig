@@ -1,0 +1,41 @@
+{% block content %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass('navigation__bar')|without('role', 'aria-labelledby') }}>
+    <div class="navbar">
+    <i class='bx bx-menu'></i>
+    <div class="logo">
+        <h1>
+            {% if site_logo %}
+                <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+                <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+                </a>
+            {% endif %}
+            {% if site_name %}
+                <div class="site-name">
+                <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+                </div>
+            {% endif %}
+            {% if site_slogan %}
+                <div class="site-slogan">{{ site_slogan }}</div>
+            {% endif %}
+        </h1>
+    </div>
+    <div class="nav-links">
+    <div class="sidebar-logo">
+        <span class="logo-name">
+            {% if site_logo %}
+                <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+                <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+                </a>
+            {% endif %}
+            {% if site_name %}
+                <div class="site-name">
+                <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+                </div>
+            {% endif %}
+            {% if site_slogan %}
+                <div class="site-slogan">{{ site_slogan }}</div>
+            {% endif %}
+        </span>
+        <i class='bx bx-x' ></i>
+    </div>
+{% endblock %}

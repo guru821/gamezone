@@ -1,0 +1,20 @@
+name: Gamezone
+type: theme
+description: This is a fluffy sub theme of Classy
+core: 8.x
+core_version_requirement: ^8 || ^9
+# Defines the base theme
+base theme: classy
+# Defines libraries group in which we can add css/js.
+libraries:
+  - gamezone/global-styling
+  - gamezone/global-scripts
+# Regions
+regions:
+  header: Header
+  hero_slider: Hero slider
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
+  disable: Disable

@@ -1,0 +1,21 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      assets/dist/css/main.css: {}
+      assets/dist/css/slick.css: {}
+      assets/dist/css/slick-theme.css: {}
+      https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css: {type: external, minified: true}
+
+global-scripts:
+  version: VERSION
+  js:
+    assets/dist/js/bundle.js: {}
+    assets/dist/js/slick.min.js: {}
+
+  dependencies: 
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
