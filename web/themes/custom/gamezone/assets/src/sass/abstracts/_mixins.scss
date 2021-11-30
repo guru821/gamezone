@@ -1,0 +1,6 @@
+// Content center mixins 
+@mixin center-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
