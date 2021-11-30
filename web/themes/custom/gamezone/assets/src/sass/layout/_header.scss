@@ -48,6 +48,14 @@ body {
             position: relative;
             list-style: none;
             padding: 0 14px;
+            &:hover {
+                .htmlCss-sub-menu {
+                    display: block;
+                }
+                .js-sub-menu {
+                    display: block;
+                }
+            }
             a {
                 height: 100%;
                 text-decoration: none;
@@ -157,20 +165,11 @@ body {
             }
         }
     }
-    input#edit-submit {
-        display: none;
-    }
-    .sidebar-logo {
-        display: none;
-    }
+    input#edit-submit,
+    .sidebar-logo,
     .bx-menu {
         display: none;
     }
-}
-
-.navigation__bar .navbar .links li:hover .htmlCss-sub-menu,
-.navigation__bar .navbar .links li:hover .js-sub-menu {
-    display: block;
 }
 
 @media (max-width:920px) {
@@ -201,7 +200,7 @@ body {
         display: block;
         max-width: 270px;
         width: 100%;
-        background: #3E8DA8;
+        background: $primary-color;
         line-height: 40px;
         padding: 20px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -209,18 +208,16 @@ body {
         z-index: 1000;
     }
     .navbar .nav-links .sidebar-logo {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include center-text;
     }
     .sidebar-logo .logo-name {
         font-size: 25px;
-        color: #fff;
+        color: $white-color;
     }
     .sidebar-logo i,
     .navbar .bx-menu {
         font-size: 25px;
-        color: #fff;
+        color: $white-color;
     }
     .navigation__bar .navbar .links {
         display: block;
@@ -248,10 +245,6 @@ body {
     .navbar .links li .sub-menu .more-sub-menu li {
         @include center-text;
     }
-    .links li:hover .htmlcss-arrow,
-    .links li:hover .js-arrow {
-        transform: rotate(0deg);
-    }
     .navbar .links li .sub-menu .more-sub-menu {
         display: none;
     }
@@ -269,13 +262,6 @@ body {
     .navbar .nav-links.show3 .links .js-sub-menu,
     .navbar .nav-links.show2 .links .more-sub-menu {
         display: block;
-    }
-    .navbar .nav-links.show1 .links .htmlcss-arrow,
-    .navbar .nav-links.show3 .links .js-arrow {
-        transform: rotate(180deg);
-    }
-    .navbar .nav-links.show2 .links .more-arrow {
-        transform: rotate(90deg);
     }
 }
 
